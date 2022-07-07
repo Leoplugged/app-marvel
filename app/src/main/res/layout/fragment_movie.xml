@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_700"
-    tools:context=".informacoes.InformacoesActivity">
+    tools:context=".ui.viewmodel.info.InfoActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/font_size_16"
-            android:text="@string/filmes_texto"
+            android:text="@string/text_movies"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="@dimen/font_size_16"

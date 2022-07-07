@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".detalhe.DetalheActivity">
+    tools:context=".ui.viewmodel.bio.DetailActivity">
 
     <ImageView
-        android:id="@+id/ivHeroiDetalhe"
+        android:id="@+id/ivHeroBio"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_margin="@dimen/margin_16"
@@ -17,25 +17,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvNomeHeroiDetalhe"
+        android:id="@+id/tvHeroName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_16"
-        android:text="@string/lista_nome_heroi"
+        android:text="@string/hero_name"
         android:textAlignment="center"
         android:textSize="@dimen/font_size_16"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/ivHeroiDetalhe"
-        app:layout_constraintStart_toStartOf="@+id/ivHeroiDetalhe"
-        app:layout_constraintTop_toBottomOf="@+id/ivHeroiDetalhe" />
+        app:layout_constraintEnd_toEndOf="@+id/ivHeroBio"
+        app:layout_constraintStart_toStartOf="@+id/ivHeroBio"
+        app:layout_constraintTop_toBottomOf="@+id/ivHeroBio" />
 
     <TextView
-        android:id="@+id/tvHeroiDetalhe"
+        android:id="@+id/tvHeroBio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_16"
-        android:text="@string/texto_detalhe_descricao"
-        app:layout_constraintEnd_toEndOf="@+id/ivHeroiDetalhe"
-        app:layout_constraintStart_toStartOf="@+id/ivHeroiDetalhe"
-        app:layout_constraintTop_toBottomOf="@+id/tvNomeHeroiDetalhe" />
+        android:text="@string/bio_text"
+        app:layout_constraintEnd_toEndOf="@+id/ivHeroBio"
+        app:layout_constraintStart_toStartOf="@+id/ivHeroBio"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeroName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

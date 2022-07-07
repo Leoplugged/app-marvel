@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.HomeActivity">
+    tools:context=".ui.view.home.HomeActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_16"
-        android:text="@string/texto_home"
+        android:text="@string/text_home"
         android:textSize="@dimen/font_size_16"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,11 +19,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvHerois"
+        android:id="@+id/rv_heroes"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/margin_8"
-        app:layout_constraintBottom_toTopOf="@+id/bvInformacoesMarvel"
+        app:layout_constraintBottom_toTopOf="@+id/bvCompanyInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -31,11 +31,11 @@
         tools:listitem="@layout/marvel_item" />
 
     <Button
-        android:id="@+id/bvInformacoesMarvel"
+        android:id="@+id/bvCompanyInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_16"
-        android:text="@string/texto_informacoes_marvel"
+        android:text="@string/text_info_company"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>

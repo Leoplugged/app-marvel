@@ -1,14 +1,14 @@
-package br.com.zup.marvel.home.adapter
+package br.com.zup.marvel.ui.view.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.marvel.databinding.MarvelItemBinding
-import br.com.zup.marvel.model.Marvel
+import br.com.zup.marvel.domain.model.Marvel
 
 class MarvelAdapter(
-    private var listaHerois: MutableList<Marvel>,
-    private val clickHeroi: (heroi: Marvel) -> Unit
+    private var heroesList: MutableList<Marvel>,
+    private val heroOnClick: (hero: Marvel) -> Unit
 ) : RecyclerView.Adapter<MarvelAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -17,28 +17,28 @@ class MarvelAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val marvelHeroi = listaHerois[position]
-        holder.adicionarInformacoesView(marvelHeroi)
+        val marvelHero = heroesList[position]
+        holder.addInfoView(marvelHero)
         holder.binding.cvItemLista.setOnClickListener {
-            clickHeroi(marvelHeroi)
+            heroOnClick(marvelHero)
         }
     }
 
-    override fun getItemCount() = listaHerois.size
+    override fun getItemCount() = heroesList.size
 
-    fun atualizarListaProduto(novaLista: MutableList<Marvel>) {
-        if (listaHerois.size == 0) {
-            listaHerois = novaLista
+    fun updateHeroList(newList: MutableList<Marvel>) {
+        if (heroesList.size == 0) {
+            heroesList = newList
         } else {
-            listaHerois.addAll(novaLista)
+            heroesList.addAll(newList)
         }
         notifyDataSetChanged()
     }
 
     class ViewHolder(val binding: MarvelItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun adicionarInformacoesView(heroi: Marvel) {
-            binding.ivHeroi.setImageResource(heroi.getImage())
-            binding.tvNomeHeroi.text = heroi.getNome()
+        fun addInfoView(hero: Marvel) {
+            binding.ivHero.setImageResource(hero.getImage())
+            binding.tvNomeHeroi.text = hero.getHeroName()
         }
     }
 }

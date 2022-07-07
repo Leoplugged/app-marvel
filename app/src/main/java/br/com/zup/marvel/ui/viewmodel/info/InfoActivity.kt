@@ -1,31 +1,31 @@
-package br.com.zup.marvel.informacoes
+package br.com.zup.marvel.ui.viewmodel.info
 
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import br.com.zup.marvel.R
-import br.com.zup.marvel.databinding.ActivityInformacoesBinding
+import br.com.zup.marvel.databinding.ActivityInfoBinding
 
-class InformacoesActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityInformacoesBinding
+class InfoActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityInfoBinding
 
     //TODO criar o PagerAdapater
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityInformacoesBinding.inflate(layoutInflater)
+        binding = ActivityInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        exibirAppBarCustomizada()
-        exibirViewPagerTabLayout()
+        showAppBarCustom()
+        showViewPagerTabLayout()
     }
 
-    private fun exibirAppBarCustomizada() {
+    private fun showAppBarCustom() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle(R.string.informacoes_name)
+        supportActionBar?.setTitle(R.string.info_name)
     }
 
-    private fun exibirViewPagerTabLayout() {
+    private fun showViewPagerTabLayout() {
         //TODO implementar a exibição do viewPager e do TabLayout
     }
 

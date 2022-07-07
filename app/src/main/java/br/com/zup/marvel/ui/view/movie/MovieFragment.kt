@@ -1,20 +1,20 @@
-package br.com.zup.marvel.informacoes.filme
+package br.com.zup.marvel.ui.view.movie
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import br.com.zup.marvel.databinding.FragmentFilmeBinding
+import br.com.zup.marvel.databinding.FragmentMovieBinding
 
-class FilmeFragment : Fragment() {
-    private lateinit var binding: FragmentFilmeBinding
+class MovieFragment : Fragment() {
+    private lateinit var binding: FragmentMovieBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentFilmeBinding.inflate(inflater, container, false)
+        binding = FragmentMovieBinding.inflate(inflater, container, false)
         return binding.root
     }
 }
