@@ -7,35 +7,36 @@
     tools:context=".ui.viewmodel.bio.DetailActivity">
 
     <ImageView
-        android:id="@+id/ivHeroBio"
+        android:id="@+id/ivCharBio"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_margin="@dimen/margin_16"
         android:scaleType="centerCrop"
         android:src="@drawable/vampira"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Imagem do SuperHeroi" />
 
     <TextView
-        android:id="@+id/tvHeroName"
+        android:id="@+id/tvCharName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_16"
-        android:text="@string/hero_name"
+        android:text="@string/character_name"
         android:textAlignment="center"
         android:textSize="@dimen/font_size_16"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/ivHeroBio"
-        app:layout_constraintStart_toStartOf="@+id/ivHeroBio"
-        app:layout_constraintTop_toBottomOf="@+id/ivHeroBio" />
+        app:layout_constraintEnd_toEndOf="@+id/ivCharBio"
+        app:layout_constraintStart_toStartOf="@+id/ivCharBio"
+        app:layout_constraintTop_toBottomOf="@+id/ivCharBio" />
 
     <TextView
-        android:id="@+id/tvHeroBio"
+        android:id="@+id/tvCharBio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_16"
-        android:text="@string/bio_text"
-        app:layout_constraintEnd_toEndOf="@+id/ivHeroBio"
-        app:layout_constraintStart_toStartOf="@+id/ivHeroBio"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeroName" />
+        android:text="@string/character_bio"
+        app:layout_constraintEnd_toEndOf="@+id/ivCharBio"
+        app:layout_constraintStart_toStartOf="@+id/ivCharBio"
+        app:layout_constraintTop_toBottomOf="@+id/tvCharName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

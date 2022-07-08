@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/ivCharacter"
             android:layout_width="match_parent"
             android:layout_height="@dimen/size_300"
             android:layout_marginTop="@dimen/margin_86"
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/font_size_16"
-            android:text="@string/text_movies"
+            android:text="@string/text_series"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="@dimen/font_size_16"

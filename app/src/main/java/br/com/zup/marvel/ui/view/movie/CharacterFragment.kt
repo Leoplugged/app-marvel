@@ -5,16 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import br.com.zup.marvel.databinding.FragmentMovieBinding
+import br.com.zup.marvel.databinding.FragmentCharacterBinding
 
-class MovieFragment : Fragment() {
-    private lateinit var binding: FragmentMovieBinding
+class CharacterFragment : Fragment() {
+    private lateinit var binding: FragmentCharacterBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentMovieBinding.inflate(inflater, container, false)
+        binding = FragmentCharacterBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

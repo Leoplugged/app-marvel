@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_16"
-        android:text="@string/text_home"
+        android:text="@string/title_home"
         android:textSize="@dimen/font_size_16"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,25 +19,43 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_heroes"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/rv_characters"
+        android:layout_width="389dp"
+        android:layout_height="562dp"
         android:layout_margin="@dimen/margin_8"
-        app:layout_constraintBottom_toTopOf="@+id/bvCompanyInfo"
+        app:layout_constraintBottom_toTopOf="@+id/bvMarvelInfo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.727"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
         tools:itemCount="7"
         tools:listitem="@layout/marvel_item" />
 
+    <!--TODO Acertar layouts de Buttons-->
     <Button
-        android:id="@+id/bvCompanyInfo"
+        android:id="@+id/bvAddCharacter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_16"
-        android:text="@string/text_info_company"
+        android:text="@string/button_add_character"
+        app:layout_constraintBottom_toTopOf="@+id/bvMarvelInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_characters"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/bvMarvelInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_marginBottom="196dp"
+        android:text="@string/text_info_marvel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

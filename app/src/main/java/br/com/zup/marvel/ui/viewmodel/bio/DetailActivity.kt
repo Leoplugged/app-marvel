@@ -6,7 +6,7 @@ import android.view.MenuItem
 import br.com.zup.marvel.MARVEL_KEY
 import br.com.zup.marvel.R
 import br.com.zup.marvel.databinding.ActivityBioBinding
-import br.com.zup.marvel.domain.model.Marvel
+import br.com.zup.marvel.domain.model.Character
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBioBinding
@@ -17,23 +17,23 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle(R.string.detail_name)
+        supportActionBar?.setTitle(R.string.title_biography)
 
         getMarvel()
     }
 
     private fun getMarvel(){
-        val marvelHero = intent.getParcelableExtra<Marvel>(MARVEL_KEY)
+        val heroHero = intent.getParcelableExtra<Character>(MARVEL_KEY)
 
-        if (marvelHero != null){
-            getInfo(marvelHero)
+        if (heroHero != null){
+            getInfo(heroHero)
         }
     }
 
-    private fun getInfo(marvel: Marvel){
-        binding.ivHeroBio.setImageResource(marvel.getImage())
-        binding.tvHeroName.text = marvel.getHeroName()
-        binding.tvHeroBio.text = marvel.getHeroBio()
+    private fun getInfo(hero: Character){
+        binding.ivHeroBio.setImageResource(hero.getImage())
+        binding.tvHeroName.text = hero.getHeroName()
+        binding.tvHeroBio.text = hero.getHeroBio()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

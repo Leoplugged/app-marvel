@@ -17,12 +17,12 @@ class InfoActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         showAppBarCustom()
-        showViewPagerTabLayout()
+        //showViewPagerTabLayout()
     }
 
     private fun showAppBarCustom() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle(R.string.info_name)
+        supportActionBar?.setTitle(R.string.company_name)
     }
 
     private fun showViewPagerTabLayout() {

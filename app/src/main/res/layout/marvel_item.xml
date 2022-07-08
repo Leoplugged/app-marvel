@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/ivHero"
+            android:id="@+id/ivChar"
             android:layout_width="@dimen/size_50"
             android:layout_height="@dimen/size_50"
             android:layout_margin="@dimen/margin_8"
@@ -22,18 +22,18 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvNomeHeroi"
+            android:id="@+id/tvCharName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_8"
             android:layout_marginEnd="@dimen/margin_8"
-            android:text="@string/hero_name"
+            android:text="@string/character_name"
             android:textSize="@dimen/font_size_16"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/ivHero"
+            app:layout_constraintBottom_toBottomOf="@+id/ivChar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ivHero"
-            app:layout_constraintTop_toTopOf="@+id/ivHero" />
+            app:layout_constraintStart_toEndOf="@+id/ivChar"
+            app:layout_constraintTop_toTopOf="@+id/ivChar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

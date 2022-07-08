@@ -9,7 +9,7 @@ import br.com.zup.marvel.ui.view.home.adapter.MarvelAdapter
 import br.com.zup.marvel.databinding.ActivityHomeBinding
 import br.com.zup.marvel.ui.viewmodel.bio.DetailActivity
 import br.com.zup.marvel.ui.viewmodel.info.InfoActivity
-import br.com.zup.marvel.domain.model.Marvel
+import br.com.zup.marvel.domain.model.Character
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -24,7 +24,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
         heroesRecyclerView()
 
-        binding.bvCompanyInfo.setOnClickListener {
+        binding.bvMarvelInfo.setOnClickListener {
             startActivity(Intent(this, InfoActivity::class.java))
         }
     }
@@ -36,10 +36,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun addItemToHeroesList() {
-        val heroesList = mutableListOf<Marvel>()
+        val heroesList = mutableListOf<Character>()
 
         heroesList.add(
-            Marvel(
+            Character(
                 R.drawable.gamora,
                 GAMORRA_NAME,
                 GAMORRA_BIO
@@ -47,7 +47,7 @@ class HomeActivity : AppCompatActivity() {
         )
 
         heroesList.add(
-            Marvel(
+            Character(
                 R.drawable.homem_ferro,
                 IRONMAN_NAME,
                 IRONMAN_BIO
@@ -55,7 +55,7 @@ class HomeActivity : AppCompatActivity() {
         )
 
         heroesList.add(
-            Marvel(
+            Character(
                 R.drawable.mulher_invisivel,
                 INVISIBLE_WOMAN_NAME,
                 INVISIBLE_WOMAN_BIO
@@ -64,7 +64,7 @@ class HomeActivity : AppCompatActivity() {
         adapter.updateHeroList(heroesList)
     }
 
-    private fun detailActivity(hero: Marvel) {
+    private fun detailActivity(hero: Character) {
         val intent = Intent(this, DetailActivity::class.java).apply {
             putExtra(MARVEL_KEY, hero)
         }

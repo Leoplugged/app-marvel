@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.marvel.databinding.MarvelItemBinding
-import br.com.zup.marvel.domain.model.Marvel
+import br.com.zup.marvel.domain.model.Character
 
 class MarvelAdapter(
-    private var heroesList: MutableList<Marvel>,
-    private val heroOnClick: (hero: Marvel) -> Unit
+    private var charactersList: MutableList<Character>,
+    private val characterOnClick: (character: Character) -> Unit
 ) : RecyclerView.Adapter<MarvelAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -17,28 +17,28 @@ class MarvelAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val marvelHero = heroesList[position]
-        holder.addInfoView(marvelHero)
+        val marvelHero = charactersList[position]
+        holder.addInfoView(marvelCharacter)
         holder.binding.cvItemLista.setOnClickListener {
-            heroOnClick(marvelHero)
+            characterOnClick(marvelCharacter)
         }
     }
 
-    override fun getItemCount() = heroesList.size
+    override fun getItemCount() = charactersList.size
 
-    fun updateHeroList(newList: MutableList<Marvel>) {
-        if (heroesList.size == 0) {
-            heroesList = newList
+    fun updateCharactersList(newList: MutableList<Character>) {
+        if (charactersList.size == 0) {
+            charactersList = newList
         } else {
-            heroesList.addAll(newList)
+            charactersList.addAll(newList)
         }
         notifyDataSetChanged()
     }
 
     class ViewHolder(val binding: MarvelItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun addInfoView(hero: Marvel) {
-            binding.ivHero.setImageResource(hero.getImage())
-            binding.tvNomeHeroi.text = hero.getHeroName()
+        fun addInfoView(character: Character) {
+            binding.ivCharacter.setImageResource(character.getCharacterThumb())
+            binding.tvCharacterName.text = character.getCharacterName()
         }
     }
 }
